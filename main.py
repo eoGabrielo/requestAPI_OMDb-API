@@ -3,12 +3,10 @@ import requests
 #API key to link registration
 API_KEY = '91fbd453'
 
-
 movieTitle = input("Enter movie name: ")
 
 #URL-API with your key and title
 url = f'http://www.omdbapi.com/?apikey={API_KEY}&t={movieTitle}'
-
 #request API
 response = requests.get(url)
 #Convert requst in json
@@ -24,16 +22,23 @@ if response.status_code == 200:
     print(f"Gender: {data.get('Genre')}")
     print(f"Score IMDb: {data.get('imdbRating')}")
 else:
-    print(f"Connection error {response.status_code}")
-    print("404 → not found")
-    print("500 → server error")
-    print("401 → unauthorized")
+    print(f"Error request code: {response.status_code}")
 
 #Data movie JSON
 dataMovie = {
-    'Title': data.get('Title'),
-    'year': data.get('Year'),
-    'Director': data.get('Director'),
-    'Gender': data.get('Genre'),
-    'Score IMDb': data.get('imdbRating')
+        'Title': data.get('Title'),
+        'year': data.get('Year'),
+        'Director': data.get('Director'),
+        'Gender': data.get('Genre'),
+        'Score IMDb': data.get('imdbRating')
 }
+
+# name file
+nameFile = 'movie.txt'
+
+# Write in Txt
+with open(nameFile, mode='w', encoding='utf-8') as f:
+    for key, value in dataMovie.items():
+        f.write(f"{key}: {value}")
+        f.write('\n')
+print(f'Date saved in {data.get("Title")} in file {nameFile} in this folder')
