@@ -17,7 +17,7 @@ data = response.json()
 #If the request is completed with code 200
 if response.status_code == 200:
     print("Connection 200 successful")
-    #verify json - print(f"{dados}")
+    #verify json - print(f"{data}")
     print(f"Title: {data.get('Title')}")
     print(f"year: {data.get('Year')}")
     print(f"Director: {data.get('Director')}")
