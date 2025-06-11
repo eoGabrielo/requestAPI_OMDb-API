@@ -58,19 +58,7 @@ Score IMDb: 8.7
 
 ## Como Executar
 
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-```
-
-2. Navegue até a pasta do projeto:
-
-```bash
-cd requestAPI_OMDb-API
-```
-
-3. Instale as dependências (caso ainda não tenha):
+3. Instale as dependências:
 
 ```bash
 pip install requests
