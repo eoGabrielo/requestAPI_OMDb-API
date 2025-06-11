@@ -1,10 +1,10 @@
-## 🎬 Projeto: Consulta de Filmes com OMDb API
+## Projeto: Consulta de Filmes com OMDb API
 
 Este projeto em Python realiza requisições à [OMDb API](http://www.omdbapi.com/) para buscar informações sobre filmes. O programa exibe os dados na tela e os salva em um arquivo `.txt` de forma formatada.
 
 ---
 
-### 📌 Funcionalidades
+### Funcionalidades
 
 * Entrada do título do filme pelo usuário.
 * Requisição HTTP à OMDb API usando o título informado.
@@ -14,7 +14,7 @@ Este projeto em Python realiza requisições à [OMDb API](http://www.omdbapi.co
 
 ---
 
-### 🛠️ Tecnologias e Bibliotecas
+### Tecnologias e Bibliotecas
 
 * Python 3.x
 * [`requests`](https://pypi.org/project/requests/) – Para fazer requisições HTTP
@@ -22,7 +22,7 @@ Este projeto em Python realiza requisições à [OMDb API](http://www.omdbapi.co
 
 ---
 
-### 📂 Estrutura de Arquivos
+### Estrutura de Arquivos
 
 ```
 requestAPI_OMDb-API/
@@ -34,7 +34,7 @@ requestAPI_OMDb-API/
 
 ---
 
-### 💡 Exemplo de Uso
+### Exemplo de Uso
 
 ```bash
 $ python main.py
@@ -51,7 +51,7 @@ Dados salvos no arquivo The Matrix.txt
 
 ---
 
-### 📄 Exemplo de Saída (`The Matrix.txt`):
+### Exemplo de Saída (`The Matrix.txt`):
 
 ```
 Title: The Matrix
@@ -63,7 +63,7 @@ Score IMDb: 8.7
 
 ---
 
-### ⚙️ Como Executar
+### ⚙Como Executar
 
 1. Clone o repositório:
 
@@ -91,7 +91,7 @@ python main.py
 
 ---
 
-### 🔑 Como obter sua API Key da OMDb
+### Como obter sua API Key da OMDb
 
 1. Acesse: [https://www.omdbapi.com/apikey.aspx](https://www.omdbapi.com/apikey.aspx)
 2. Registre-se gratuitamente.
@@ -104,7 +104,7 @@ API_KEY = 'SUA_CHAVE_AQUI'
 
 ---
 
-### 🧠 Aprendizados
+### Aprendizados
 
 Esse projeto mostra que você entende:
 
@@ -115,16 +115,13 @@ Esse projeto mostra que você entende:
 
 ---
 
-### 🚀 Possíveis Melhorias Futuras
+### Possíveis Melhorias Futuras
 
-* Interface gráfica (com Tkinter ou PyQt)
-* Opção para salvar em CSV ou JSON
-* Buscar múltiplos filmes de uma vez
 * Exportar para banco de dados SQLite
 
 ---
 
-### 📃 Licença
+### Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
