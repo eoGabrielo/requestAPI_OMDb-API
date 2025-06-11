@@ -1,7 +1,3 @@
-Claro! Aqui está o **README.md completo**, no exato estilo que você pediu, adaptado ao seu **código mais recente**:
-
----
-
 # Projeto: Consulta de Filmes com OMDb API
 
 Este projeto em Python realiza requisições à OMDb API para buscar informações sobre filmes. O programa exibe os dados na tela e os salva em um arquivo `.txt` com o nome do filme de forma formatada.
