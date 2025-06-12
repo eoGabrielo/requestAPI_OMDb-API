@@ -52,6 +52,5 @@ elif response.status_code == 504:
 if response.status_code == 200 and nameFile != None:
     with open(nameFile, mode='w', encoding='utf-8') as f:
         for key, value in dataMovie.items():
-            f.write(f"{key}: {value}")
-            f.write('\n')
+            f.write(f"{key}: {value}\n")
         print(f'Table and CSV of Date of {data.get("Title")} saved in file {data.get("Title")}.xlsx/csv in this folder\n')
