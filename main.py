@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 
 #API key to link registration
-API_KEY = '91fbd453'
+apiKey = '91fbd453'
 
 titleMovie = input('Write title movie: ')
 
