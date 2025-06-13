@@ -8,7 +8,7 @@ titleMovie = input('Write title movie: ')
 
 def searchMovie(title):
     # URL-API with your key and title
-    url = f'http://www.omdbapi.com/?apikey={API_KEY}&t={title}'
+    url = f'http://www.omdbapi.com/?apikey={apiKey}&t={title}'
 
     # request API, check StatusCode
     response = requests.get(url)
@@ -30,7 +30,7 @@ def searchMovie(title):
         print(f"Error request code: {response.status_code} server error")
         return None
     elif response.status_code == 200:
-        print(f"EXCEL and CSV file created in this folder with successfully, named as {dataJson.get('Title')}.xlsx/csv")
+        print(f"Film [{dataJson['Title']}] successfully found\n")
     return dataJson
 
 #Saved return JSON for convert to DATAFRAME and CSV
@@ -49,3 +49,9 @@ if dataJsonMovie != None:
     #Create Excel and Csv file
     dataFrame.to_excel(f"{dataJsonMovie['Title']}.xlsx")
     createCsvFile(dataJsonMovie)
+    print(f'Title: {dataJsonMovie.get("Title")}')
+    print(f'Year: {dataJsonMovie.get("Year")}')
+    print(f'Director: {dataJsonMovie.get("Director")}')
+    print(f'Genre: {dataJsonMovie.get("Genre")}')
+    print(f'Score IMDb: {dataJsonMovie.get("imdbRating")}\n')
+    print(f"EXCEL and CSV file created in this folder with successfully, named as {dataJsonMovie.get('Title')}.xlsx/csv")
