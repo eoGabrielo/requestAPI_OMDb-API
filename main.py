@@ -46,6 +46,6 @@ def createCsvFile(dfMovie):
 
 #Create table with DATAFRAME
 if dataJsonMovie != None:
-    #Create Excel file
+    #Create Excel and Csv file
     dataFrame.to_excel(f"{dataJsonMovie['Title']}.xlsx")
     createCsvFile(dataJsonMovie)
