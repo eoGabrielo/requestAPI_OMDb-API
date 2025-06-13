@@ -54,4 +54,5 @@ if dataJsonMovie != None:
     print(f'Director: {dataJsonMovie.get("Director")}')
     print(f'Genre: {dataJsonMovie.get("Genre")}')
     print(f'Score IMDb: {dataJsonMovie.get("imdbRating")}\n')
-    print(f"EXCEL and CSV file created in this folder with successfully, named as {dataJsonMovie.get('Title')}.xlsx/csv")
+    print(f"EXCEL and CSV file with more information was successfully "
+          f"created in this folder, named as {dataJsonMovie.get('Title')}.xlsx/csv")
