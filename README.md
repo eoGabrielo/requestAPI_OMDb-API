@@ -11,10 +11,6 @@ Este projeto em Python permite buscar informações detalhadas de um filme atrav
 projeto\_filmes/
 ├── main.py              # Arquivo principal que executa o programa
 ├── funcs.py             # Arquivo com as funções auxiliares
-└── arquivos/
-├── Tabela.xlsx      # Arquivo gerado com os dados em formato Excel
-└── texto.csv        # Arquivo gerado com os dados em formato CSV
-
 ````
 
 ---
@@ -72,8 +68,7 @@ projeto\_filmes/
 ## Observações
 
 * É necessário ter acesso à internet para que a API funcione.
-* Certifique-se de que a chave da API (`apikey`) está válida.
-  A usada aqui é pública e gratuita: `91fbd453`
+* Certifique-se da chave da API: `91fbd453`
 
 ---
 
