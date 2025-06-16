@@ -1,3 +1,4 @@
+#Crie uma pasta com nome *arquivos*
 from funcs import buscar_Filme_Retorna_JSON, criarCSV, criar_DataFrame_Excel
 
 tituloFilme = input('Escreva o nome de um filme:')
