@@ -1,141 +1,86 @@
+# 🎬 Buscador de Filmes com API OMDb
 
-# Projeto: Consulta de Filmes com OMDb API + Exportação para Excel e CSV
-
-Este projeto em Python permite consultar informações detalhadas de filmes usando a OMDb API. A aplicação recebe o nome de um filme, realiza uma requisição à API e retorna os dados do título, como ano, diretor, gênero e nota no IMDb. Além disso, exporta os dados para planilha Excel (.xlsx) e arquivo .csv no diretório local.
-
----
-
-## Funcionalidades
-
-- Entrada interativa do nome do filme.
-- Requisição HTTP para a OMDb API.
-- Verificação do código de resposta HTTP.
-- Extração e exibição de dados relevantes do filme.
-- Criação de um DataFrame com os dados recebidos.
-- Exportação para:
-  - `.xlsx` (Excel)
-  - `.csv` (arquivo de texto separado por vírgulas)
-- Mensagens informativas para o usuário.
-- Tratamento de erros HTTP (401, 504).
+Este projeto em Python permite buscar informações detalhadas de um filme através da API pública [OMDb](http://www.omdbapi.com/), exportando os dados obtidos em dois formatos: **Excel (.xlsx)** e **CSV (.csv)**.  
+É uma ótima ferramenta para treinar requisições HTTP, manipulação de arquivos e estruturação com Pandas.
 
 ---
 
-## Tecnologias Utilizadas
-
-- **Python 3.x**
-- `requests` — Para realizar chamadas HTTP à API.
-- `pandas` — Para manipulação de dados e exportação para Excel.
-- `openpyxl` — Requisito do pandas para exportar `.xlsx`.
-
----
-
-## Estrutura de Arquivos
+## 📁 Estrutura do Projeto
 
 ```
 
-consulta-filmes/
-│
-├── main.py           # Código-fonte principal do programa
-├── README.md         # Este arquivo de explicação do projeto
-├── Titanic.xlsx      # Arquivo gerado (exemplo)
-└── Titanic.csv       # Arquivo gerado (exemplo)
+projeto\_filmes/
+├── main.py              # Arquivo principal que executa o programa
+├── funcs.py             # Arquivo com as funções auxiliares
+└── arquivos/
+├── Tabela.xlsx      # Arquivo gerado com os dados em formato Excel
+└── texto.csv        # Arquivo gerado com os dados em formato CSV
 
 ````
 
 ---
 
-## Exemplo de Uso
+## 🚀 Como Executar
 
-```bash
-$ python main.py
-Write title movie: Titanic
-
-EXCEL and CSV file created in this folder with successfully, named as Titanic.xlsx/csv
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
 ````
 
+2. **Instale as dependências**:
+
+   ```bash
+   pip install pandas requests
+   ```
+
+3. **Crie a pasta onde os arquivos serão salvos**:
+
+   ```bash
+   mkdir arquivos
+   ```
+
+4. **Execute o programa**:
+
+   ```bash
+   python main.py
+   ```
+
+5. **Digite o nome do filme desejado** e os arquivos serão salvos na pasta `arquivos/`.
+
 ---
 
-## Como Executar
+## 🧠 Funcionalidades
 
-1. **Clone o repositório**
+* Busca de filme na API OMDb por título.
+* Exibição de mensagem com sucesso ou erro da requisição.
+* Exportação dos dados em:
+
+  * Excel (`Tabela.xlsx`)
+  * CSV (`texto.csv`)
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Python 3**
+* **Requests** – para fazer requisições HTTP
+* **Pandas** – para manipulação de dados e criação do Excel
+* **API OMDb** – para consulta de dados dos filmes
+
+---
+
+## 📌 Observações
+
+* É necessário ter acesso à internet para que a API funcione.
+* Certifique-se de que a chave da API (`apikey`) está válida.
+  A usada aqui é pública e gratuita: `91fbd453`
+
+---
+
+## 📷 Exemplo de uso
 
 ```bash
-git clone https://github.com/seu-usuario/consulta-filmes.git
-cd consulta-filmes
+Escreva o nome de um filme: Interestelar
+Filme [Interstellar], buscado com sucesso, veja seus dados na pasta arquivos!
 ```
-
-2. **Instale as dependências**
-
-```bash
-pip install requests pandas openpyxl
-```
-
-3. **Execute o script**
-
-```bash
-python main.py
-```
-
----
-
-## Como obter sua API Key da OMDb
-
-1. Acesse: [https://www.omdbapi.com/apikey.aspx](https://www.omdbapi.com/apikey.aspx)
-2. Registre-se gratuitamente e você receberá sua chave por e-mail.
-3. Substitua no código:
-
-```python
-API_KEY = 'SUA_CHAVE_AQUI'
-```
-
----
-
-## Explicação do Código
-
-* `requests.get(...)`: realiza a chamada HTTP para buscar os dados do filme.
-* `response.json()`: transforma a resposta em um dicionário Python.
-* `pandas.DataFrame(data)`: cria uma tabela com todos os dados da API.
-* `to_excel(...)`: exporta os dados para um arquivo `.xlsx`.
-* `with open(..., 'w')`: grava dados principais em um arquivo `.csv`.
-* `print(...)`: exibe informações relevantes no terminal.
-
----
-
-## Funções Criadas
-
-O código foi estruturado em funções para melhor organização e reutilização:
-
-### `searchMovie(title)`
-
-* Recebe o título do filme como parâmetro.
-* Faz a requisição à OMDb API.
-* Trata os possíveis erros (como 401, 504, ou filme não encontrado).
-* Retorna os dados do filme em formato JSON se encontrado com sucesso.
-
-### `createCsvFile(dfMovie)`
-
-* Recebe o dicionário com os dados do filme.
-* Cria um arquivo `.csv` com os pares chave\:valor.
-* Cada linha do arquivo representa uma característica do filme, como Título, Ano, Diretor, etc.
-
-Essas funções tornam o código mais limpo, reutilizável e fácil de manter.
-
----
-
-## Aprendizados
-
-Este projeto demonstra o uso prático de:
-
-* Consumo de APIs REST em Python.
-* Manipulação de dados com pandas.
-* Exportação de dados em formatos profissionais (CSV e Excel).
-* Boas práticas no tratamento de erros HTTP.
-* Modularização de código com funções reutilizáveis.
-
----
-
-## Possíveis Melhorias Futuras
-
-* Exportar os dados para banco de dados SQLite.
-* Exportar também para `.json`.
-
