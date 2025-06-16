@@ -1,11 +1,10 @@
-# 🎬 Buscador de Filmes com API OMDb
+# Buscador de Filmes com API OMDb
 
 Este projeto em Python permite buscar informações detalhadas de um filme através da API pública [OMDb](http://www.omdbapi.com/), exportando os dados obtidos em dois formatos: **Excel (.xlsx)** e **CSV (.csv)**.  
-É uma ótima ferramenta para treinar requisições HTTP, manipulação de arquivos e estruturação com Pandas.
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 
@@ -20,7 +19,7 @@ projeto\_filmes/
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 1. **Clone o repositório**:
    ```bash
@@ -50,7 +49,7 @@ projeto\_filmes/
 
 ---
 
-## 🧠 Funcionalidades
+## Funcionalidades
 
 * Busca de filme na API OMDb por título.
 * Exibição de mensagem com sucesso ou erro da requisição.
@@ -61,7 +60,7 @@ projeto\_filmes/
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **Python 3**
 * **Requests** – para fazer requisições HTTP
@@ -70,7 +69,7 @@ projeto\_filmes/
 
 ---
 
-## 📌 Observações
+## Observações
 
 * É necessário ter acesso à internet para que a API funcione.
 * Certifique-se de que a chave da API (`apikey`) está válida.
@@ -78,7 +77,7 @@ projeto\_filmes/
 
 ---
 
-## 📷 Exemplo de uso
+## Exemplo de uso
 
 ```bash
 Escreva o nome de um filme: Interestelar
