@@ -6,8 +6,8 @@ Este projeto em Python permite buscar informações detalhadas de um filme atrav
 
 ## Estrutura do Projeto
 
-main.py # Arquivo principal que executa o programa
-funcs.py # Arquivo com as funções auxiliares
+* main.py # Arquivo principal que executa o programa
+* funcs.py # Arquivo com as funções auxiliares
 
 ---
 
